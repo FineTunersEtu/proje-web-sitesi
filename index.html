@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ADVIS – Project Reports</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="badge">TOBB ETÜ · Senior Design Project</div>
+      <h1>ADVIS</h1>
+      <p class="subtitle">Accident Detection &amp; Vehicle Identification System</p>
+      <p class="team">
+        Ahmet Faruk Sevim · Hasan Uzun · Utku Çetin · Semih Uçan · Muhammet Emir Dizdar
+      </p>
+      <p class="supervisor">Supervisor: Assoc. Prof. Dr. Yücel Çimtay</p>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="about">
+      <h2>About the Project</h2>
+      <p>
+        ADVIS is an end-to-end intelligent traffic surveillance platform that automatically detects
+        traffic accidents, interprets accident scenarios using a multimodal LLM, performs license
+        plate recognition, and generates structured forensic reports — all within a triggered pipeline
+        architecture.
+      </p>
+      <div class="tags">
+        <span>LSTM Autoencoder</span>
+        <span>YOLOv8 + ByteTrack</span>
+        <span>EasyOCR</span>
+        <span>Spring Boot</span>
+        <span>Next.js</span>
+        <span>WebSocket</span>
+      </div>
+    </section>
+
+    <section class="reports">
+      <h2>Project Reports</h2>
+      <div class="card-grid">
+
+        <div class="card">
+          <div class="card-icon">📄</div>
+          <div class="card-body">
+            <span class="card-label">Final Paper</span>
+            <h3>FineTuners Final Report</h3>
+            <p>End-to-end system paper covering anomaly detection, LLM integration, LPR, backend and frontend.</p>
+          </div>
+          <a class="btn" href="pdfs/final_report.pdf" target="_blank">View PDF</a>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🧪</div>
+          <div class="card-body">
+            <span class="card-label">Testing</span>
+            <h3>Test Plan &amp; Results</h3>
+            <p>38 test cases across all modules. 76.3% full pass rate. Detailed test traceability matrix.</p>
+          </div>
+          <a class="btn" href="pdfs/test_report.pdf" target="_blank">View PDF</a>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🔩</div>
+          <div class="card-body">
+            <span class="card-label">Design</span>
+            <h3>Low-Level Design</h3>
+            <p>Class interfaces, package decomposition, UML diagrams and engineering trade-offs.</p>
+          </div>
+          <a class="btn" href="pdfs/low_level_design.pdf" target="_blank">View PDF</a>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🏗️</div>
+          <div class="card-body">
+            <span class="card-label">Design</span>
+            <h3>High-Level Design</h3>
+            <p>System architecture, subsystem decomposition, hardware/software mapping and security design.</p>
+          </div>
+          <a class="btn" href="pdfs/high_level_design.pdf" target="_blank">View PDF</a>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">📊</div>
+          <div class="card-body">
+            <span class="card-label">Analysis</span>
+            <h3>Analysis Report</h3>
+            <p>Functional &amp; non-functional requirements, system models, scenarios and use cases.</p>
+          </div>
+          <a class="btn" href="pdfs/analysis_report.pdf" target="_blank">View PDF</a>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">📋</div>
+          <div class="card-body">
+            <span class="card-label">Specifications</span>
+            <h3>Project Specifications</h3>
+            <p>System requirements, constraints, professional and ethical considerations.</p>
+          </div>
+          <a class="btn" href="pdfs/specifications.pdf" target="_blank">View PDF</a>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🚀</div>
+          <div class="card-body">
+            <span class="card-label">Proposal</span>
+            <h3>Project Proposal</h3>
+            <p>Initial project description, motivation and scope definition.</p>
+          </div>
+          <a class="btn" href="pdfs/project_proposal.pdf" target="_blank">View PDF</a>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">⚖️</div>
+          <div class="card-body">
+            <span class="card-label">Constraints &amp; Impact</span>
+            <h3>PKE Document</h3>
+            <p>Standards compliance, project constraints management and impact analysis (TR).</p>
+          </div>
+          <a class="btn" href="pdfs/constraints.pdf" target="_blank">View PDF</a>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="pipeline">
+      <h2>System Pipeline</h2>
+      <div class="pipeline-steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-text"><strong>Video Ingestion</strong><br>RTSP stream via YOLO + ByteTrack</div>
+        </div>
+        <div class="arrow">→</div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-text"><strong>Anomaly Detection</strong><br>LSTM Autoencoder on motion features</div>
+        </div>
+        <div class="arrow">→</div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-text"><strong>LLM Analysis</strong><br>Multimodal accident interpretation</div>
+        </div>
+        <div class="arrow">→</div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-text"><strong>LPR / OCR</strong><br>License plate extraction</div>
+        </div>
+        <div class="arrow">→</div>
+        <div class="step">
+          <div class="step-num">5</div>
+          <div class="step-text"><strong>Forensic Report</strong><br>JSON + human-readable output</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <h2>Test Results</h2>
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="stat-num">38</div>
+          <div class="stat-label">Total Test Cases</div>
+        </div>
+        <div class="stat-card green">
+          <div class="stat-num">29</div>
+          <div class="stat-label">Passed (76.3%)</div>
+        </div>
+        <div class="stat-card yellow">
+          <div class="stat-num">9</div>
+          <div class="stat-label">Partially Passed</div>
+        </div>
+        <div class="stat-card blue">
+          <div class="stat-num">0</div>
+          <div class="stat-label">Failed</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>ADVIS · TOBB ETÜ Computer Engineering &amp; AI Engineering · 2025–2026</p>
+    <a href="https://github.com/FineTunersEtu" target="_blank">GitHub: FineTunersEtu</a>
+  </footer>
+
+</body>
+</html>
